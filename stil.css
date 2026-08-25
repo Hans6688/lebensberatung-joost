@@ -1,0 +1,348 @@
+/* Lebensberatung Joost – Stylesheet */
+:root {
+  --creme: #FAF6EF;
+  --creme-dunkel: #F1EAE0;
+  --gruen: #44604E;
+  --gruen-dunkel: #35503F;
+  --terra: #BC7A4B;
+  --terra-hell: #D9A97F;
+  --tinte: #2E2A25;
+  --grau: #6B645C;
+  --weiss: #FFFFFF;
+  --schatten: 0 10px 30px rgba(46, 42, 37, .10);
+  --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+
+body {
+  font-family: 'Source Sans 3', -apple-system, 'Segoe UI', sans-serif;
+  font-size: 1.075rem;
+  line-height: 1.7;
+  color: var(--tinte);
+  background: var(--creme);
+}
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; line-height: 1.2; color: var(--gruen-dunkel); }
+h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); }
+h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom: .6em; }
+h3 { font-size: 1.45rem; margin-bottom: .4em; }
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--gruen); }
+
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+.vorspann {
+  display: inline-block;
+  font-size: .85rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--terra);
+  font-weight: 600;
+  margin-bottom: .9em;
+}
+
+/* ---------- Kopfbereich ---------- */
+.kopf {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  background: rgba(250, 246, 239, .97);
+
+  border-bottom: 1px solid rgba(46, 42, 37, .08);
+}
+.kopf-innen {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.marke { text-decoration: none; }
+.marke strong {
+  display: block;
+  white-space: nowrap;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  letter-spacing: .1em;
+  color: var(--gruen-dunkel);
+}
+.marke span { font-size: .78rem; letter-spacing: .06em; color: var(--grau); }
+
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--tinte);
+  font-size: .98rem;
+  font-weight: 600;
+}
+.nav a:hover { color: var(--terra); }
+.nav .knopf { padding: 10px 20px; }
+
+.menue-knopf { display: none; background: none; border: none; font-size: 1.7rem; color: var(--gruen-dunkel); cursor: pointer; }
+
+/* ---------- Knöpfe ---------- */
+.knopf {
+  display: inline-block;
+  background: var(--gruen);
+  color: var(--weiss) !important;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 15px 32px;
+  border-radius: 999px;
+  border: 2px solid var(--gruen);
+  transition: background .2s, color .2s;
+}
+.knopf:hover { background: var(--gruen-dunkel); border-color: var(--gruen-dunkel); }
+.knopf.hell { background: transparent; color: var(--gruen) !important; }
+.knopf.hell:hover { background: var(--gruen); color: var(--weiss) !important; }
+.knopf.terra { background: var(--terra); border-color: var(--terra); }
+.knopf.terra:hover { background: #A4683D; border-color: #A4683D; }
+
+/* ---------- Held ---------- */
+.held {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 0 90px;
+  background: linear-gradient(rgba(38, 45, 38, .46), rgba(38, 45, 38, .46)), url('bilder/neue-lebensfreude-psychologische-beratung.jpg') center 30% / cover no-repeat;
+}
+.held h1, .held p { color: var(--weiss); }
+.held h1 { color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.25); }
+.held .untertitel {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  max-width: 620px;
+  margin: 1.2em 0 2em;
+}
+.held .vorspann { color: var(--terra-hell); }
+.held-knoepfe { display: flex; gap: 16px; flex-wrap: wrap; }
+.held-knoepfe .hell { color: #fff !important; border-color: #fff; }
+.held-knoepfe .hell:hover { background: #fff; color: var(--gruen-dunkel) !important; }
+
+/* ---------- Abschnitte ---------- */
+.abschnitt { padding: 90px 0; }
+.abschnitt.dunkel { background: var(--gruen-dunkel); }
+.abschnitt.dunkel h2, .abschnitt.dunkel h3, .abschnitt.dunkel p { color: var(--creme); }
+.abschnitt.beige { background: var(--creme-dunkel); }
+
+.zweispaltig {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+}
+.zweispaltig .bildrahmen img {
+  border-radius: var(--radius);
+  box-shadow: var(--schatten);
+}
+.zweispaltig p + p { margin-top: 1em; }
+
+/* ---------- Karten ---------- */
+.kartenreihe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 46px;
+}
+.karte {
+  background: var(--weiss);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--schatten);
+  display: flex;
+  flex-direction: column;
+}
+.karte img { height: 210px; object-fit: cover; width: 100%; }
+.karte .karte-text { padding: 26px 26px 30px; flex: 1; }
+.karte h3 { color: var(--gruen); }
+
+/* ---------- Merkmalliste ---------- */
+.merkmale { list-style: none; margin-top: 1.2em; }
+.merkmale li {
+  padding-left: 32px;
+  position: relative;
+  margin-bottom: .7em;
+}
+.merkmale li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .5em;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--terra);
+}
+
+/* ---------- Ablauf ---------- */
+.schritte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 46px; }
+.schritt {
+  background: var(--weiss);
+  border-radius: var(--radius);
+  padding: 34px 30px;
+  box-shadow: var(--schatten);
+}
+.schritt .nummer {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.6rem;
+  color: var(--terra);
+  line-height: 1;
+  margin-bottom: .35em;
+}
+
+/* ---------- Stimmen ---------- */
+.stimmen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 46px; }
+.stimme {
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+}
+.stimme blockquote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: var(--creme);
+  margin-bottom: 1.2em;
+}
+.stimme cite { font-style: normal; color: var(--terra-hell); font-weight: 600; }
+
+/* ---------- Preise ---------- */
+.preisreihe { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 46px; }
+.preiskarte {
+  background: var(--weiss);
+  border-radius: var(--radius);
+  padding: 36px 30px;
+  text-align: center;
+  box-shadow: var(--schatten);
+  border-top: 4px solid var(--creme-dunkel);
+}
+.preiskarte.betont { border-top-color: var(--terra); }
+.preiskarte .preis {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.7rem;
+  color: var(--gruen-dunkel);
+  margin: .2em 0 .1em;
+}
+.preiskarte .einheit { color: var(--grau); font-size: .95rem; margin-bottom: 1em; }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 800px; margin: 46px auto 0; }
+.faq details {
+  background: var(--weiss);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  box-shadow: var(--schatten);
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 20px 26px;
+  color: var(--gruen-dunkel);
+  list-style: none;
+  position: relative;
+  padding-right: 54px;
+}
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--terra);
+}
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 26px 22px; }
+
+/* ---------- Kontakt ---------- */
+.kontakt-gitter { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; margin-top: 40px; }
+.kontakt-daten p { margin-bottom: 1em; }
+.kontakt-daten a { color: var(--gruen-dunkel); font-weight: 600; }
+.formular { background: var(--weiss); border-radius: var(--radius); padding: 36px; box-shadow: var(--schatten); }
+.formular label { display: block; font-weight: 600; font-size: .95rem; margin: 16px 0 6px; }
+.formular input, .formular textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #D8D0C4;
+  border-radius: 8px;
+  font: inherit;
+  background: var(--creme);
+}
+.formular input:focus, .formular textarea:focus { outline: 2px solid var(--gruen); border-color: var(--gruen); }
+.formular button { margin-top: 22px; width: 100%; cursor: pointer; font-size: 1.05rem; }
+.formular .hinweis { font-size: .85rem; color: var(--grau); margin-top: 12px; }
+
+/* ---------- Fuß ---------- */
+.fuss { background: var(--tinte); color: #CFC8BE; padding: 56px 0 32px; }
+.fuss-gitter { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.fuss h3 { color: var(--creme); font-size: 1.2rem; }
+.fuss a { color: #CFC8BE; text-decoration: none; }
+.fuss a:hover { color: var(--terra-hell); }
+.fuss ul { list-style: none; }
+.fuss li { margin-bottom: .5em; }
+.fuss .rechtliches {
+  border-top: 1px solid rgba(255,255,255,.14);
+  padding-top: 24px;
+  font-size: .88rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- Unterseiten ---------- */
+.seitenkopf {
+  padding: 170px 0 70px;
+  background: var(--gruen-dunkel);
+}
+.seitenkopf h1, .seitenkopf p { color: var(--creme); }
+.seitenkopf p { max-width: 640px; margin-top: .8em; font-size: 1.15rem; }
+
+.bericht {
+  background: var(--weiss);
+  border-radius: var(--radius);
+  padding: 44px;
+  box-shadow: var(--schatten);
+  margin-bottom: 36px;
+}
+.bericht p + p { margin-top: 1em; }
+.bericht .zitat {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--gruen);
+  border-left: 3px solid var(--terra);
+  padding-left: 20px;
+  margin: 1.2em 0;
+}
+.rechtstext h2 { margin-top: 1.6em; font-size: 1.6rem; }
+.rechtstext h3 { margin-top: 1.2em; }
+.rechtstext p { margin-bottom: 1em; }
+
+/* ---------- Mobil ---------- */
+@media (max-width: 900px) {
+  .zweispaltig, .kontakt-gitter { grid-template-columns: 1fr; gap: 40px; }
+  .kartenreihe, .schritte, .stimmen, .preisreihe { grid-template-columns: 1fr; }
+  .fuss-gitter { grid-template-columns: 1fr; }
+  .menue-knopf { display: block; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--creme);
+    flex-direction: column;
+    padding: 24px;
+    border-bottom: 1px solid rgba(46,42,37,.1);
+  }
+  .nav.offen { display: flex; }
+  .marke strong { font-size: 1.02rem; letter-spacing: .06em; white-space: nowrap; }
+  .marke span { display: none; }
+  .held { min-height: 80vh; padding-top: 130px; }
+  .abschnitt { padding: 64px 0; }
+  .bericht { padding: 28px 22px; }
+}
