@@ -146,11 +146,22 @@ a { color: var(--gruen); }
 }
 .held .vorspann {
   color: #F2D5AC;
+  font-family: 'Source Sans 3', -apple-system, 'Segoe UI', sans-serif;
   font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
   background: rgba(30, 36, 30, .5);
   border: 1px solid rgba(242, 213, 172, .35);
   border-radius: 999px;
   padding: 9px 22px;
+}
+.held .leitspruch {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .25);
 }
 .held-knoepfe { display: flex; gap: 16px; flex-wrap: wrap; }
 .held-knoepfe .hell { color: #fff !important; border-color: #fff; }
