@@ -7,8 +7,8 @@
 ## 1. Überblick
 
 Redesign der Website **lebensberatung-joost.de** für Elske Joost – psychologische
-Beratung für Menschen in belastenden Lebenssituationen, telefonisch oder online
-per Video (Standort Trier). Kernangebot laut Seite: 60 Minuten für 60 Euro,
+Beratung für Menschen in belastenden Lebenssituationen, telefonisch, online
+per Video oder persönlich vor Ort in Trier. Kernangebot laut Seite: 60 Minuten für 60 Euro,
 unverbindliches Erstgespräch.
 
 ## 2. Technik & Architektur
@@ -63,3 +63,4 @@ Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
 | 08/2026 | Redesign als statische HTML-Website erstellt (Claude-Code-Sitzung). |
 | 25.08.2026 | Projekt auf GitHub übertragen; Dokumentation und KI-Briefing angelegt. |
 | 30.08.2026 | Hintergrundvideo (Weizenfeld) im Startbereich ergänzt – SEO-schonend: Standbild zuerst, Video erst nach Seitenaufbau, nicht auf Mobilgeräten. |
+| 30.08.2026 | Kundenwunsch: Überschrift im Startbereich und Seitentitel auf „Psychologische Beraterin und Pädagogin in Trier – auch online“ geändert; dritte Beratungsform „Persönliche Beratung in Trier“ (60 Min./60 €) ergänzt und in FAQ, Kontakt, Fußzeile und Suchmaschinen-Daten nachgezogen. |
