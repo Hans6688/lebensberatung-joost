@@ -1,6 +1,6 @@
 # Lebensberatung Joost – Website-Redesign
 
-**Stand:** 25.08.2026
+**Stand:** 30.08.2026
 
 **Ursprünglich gebaut mit:** Claude (Claude-Code-Sitzung „Redesign Lebensberatung Joost“, August 2026)
 
@@ -24,8 +24,24 @@ kein Build-Schritt (SEO-/GEO-freundlich und ohne Wartungsaufwand).
 | `erfahrungsberichte.html` | Erfahrungsberichte / Referenzen |
 | `impressum.html`, `datenschutz.html` | Rechtstexte |
 | `stil.css` | zentrales Stylesheet |
-| `bilder/` | optimierte Fotos (Beratungssituationen, Porträt) |
+| `bilder/` | optimierte Fotos (Beratungssituationen, Porträt) sowie Hintergrundvideo + Standbild für die Startseite |
 | `robots.txt`, `sitemap.xml` | Suchmaschinen-Steuerung |
+
+## 3a. Hintergrundvideo auf der Startseite
+
+Der Startbereich zeigt ein kurzes Naturvideo (Weizenfeld im Sonnenaufgang,
+19 Sekunden, ohne Ton, läuft in Schleife). Damit die Ladezeit und damit die
+Google-Bewertung nicht leidet, ist es bewusst zurückhaltend eingebaut:
+
+- Beim Seitenaufruf lädt zuerst nur ein kleines Standbild (ca. 100 KB) –
+  die Seite wirkt sofort fertig.
+- Das Video (ca. 4,4 MB, von ursprünglich 75 MB verkleinert) lädt erst,
+  nachdem die restliche Seite komplett geladen ist, und blendet dann weich ein.
+- Auf Handys und kleinen Bildschirmen (unter 900 px Breite) lädt das Video
+  gar nicht – dort bleibt das Standbild stehen. Das spart Datenvolumen und
+  hält die mobile Seite schnell (Google bewertet mobil zuerst).
+- Wer im Betriebssystem „Bewegung reduzieren“ oder den Datensparmodus
+  aktiviert hat, bekommt ebenfalls nur das Standbild.
 
 ## 4. Betrieb
 
@@ -46,3 +62,4 @@ Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
 |---|---|
 | 08/2026 | Redesign als statische HTML-Website erstellt (Claude-Code-Sitzung). |
 | 25.08.2026 | Projekt auf GitHub übertragen; Dokumentation und KI-Briefing angelegt. |
+| 30.08.2026 | Hintergrundvideo (Weizenfeld) im Startbereich ergänzt – SEO-schonend: Standbild zuerst, Video erst nach Seitenaufbau, nicht auf Mobilgeräten. |

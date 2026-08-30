@@ -108,11 +108,34 @@ a { color: var(--gruen); }
 /* ---------- Held ---------- */
 .held {
   position: relative;
+  overflow: hidden;
   min-height: 92vh;
   display: flex;
   align-items: center;
   padding: 140px 0 90px;
-  background: linear-gradient(rgba(38, 45, 38, .46), rgba(38, 45, 38, .46)), url('bilder/neue-lebensfreude-psychologische-beratung.jpg') center 30% / cover no-repeat;
+  background: url('bilder/ruhe-weizenfeld-poster.jpg') center / cover no-repeat;
+}
+.held::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(38, 45, 38, .46);
+  z-index: 1;
+}
+.held .container { position: relative; z-index: 2; }
+.held-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.held-video.laeuft { opacity: 1; }
+@media (max-width: 899px) {
+  .held-video { display: none; }
 }
 .held h1, .held p { color: var(--weiss); }
 .held h1 { color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.25); }

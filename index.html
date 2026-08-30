@@ -101,6 +101,9 @@
 </header>
 
 <section class="held">
+  <video class="held-video" id="hintergrundvideo" muted loop playsinline preload="none" poster="bilder/ruhe-weizenfeld-poster.jpg" aria-hidden="true" tabindex="-1">
+    <source data-src="bilder/ruhe-weizenfeld-video.mp4" type="video/mp4">
+  </video>
   <div class="container">
     <span class="vorspann">Psychologische Beratung in Trier &amp; online</span>
     <h1>Orientierung finden.<br>Eigene Kräfte stärken.<br>Neue Wege gehen.</h1>
@@ -350,6 +353,23 @@
 </footer>
 
 <script>
+// Hintergrundvideo erst nach dem vollständigen Seitenaufbau laden:
+// nur auf großen Bildschirmen, nicht bei Datensparmodus oder reduzierter Bewegung.
+window.addEventListener('load', function () {
+  var video = document.getElementById('hintergrundvideo');
+  if (!video) return;
+  var grossesGeraet = window.matchMedia('(min-width: 900px)').matches;
+  var ruhigeDarstellung = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var datenSparen = navigator.connection && navigator.connection.saveData;
+  if (!grossesGeraet || ruhigeDarstellung || datenSparen) return;
+  var quelle = video.querySelector('source');
+  quelle.src = quelle.dataset.src;
+  video.load();
+  video.play().then(function () {
+    video.classList.add('laeuft');
+  }).catch(function () {});
+});
+
 function nachrichtSenden(f) {
   var betreff = "Anfrage Erstgespräch";
   var text = "Name: " + f.name.value +
