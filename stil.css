@@ -144,7 +144,11 @@ a { color: var(--gruen); }
   max-width: 620px;
   margin: 1.2em 0 2em;
 }
-.held .vorspann { color: var(--terra-hell); }
+.held .vorspann {
+  color: var(--creme);
+  font-size: 1.05rem;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .35);
+}
 .held-knoepfe { display: flex; gap: 16px; flex-wrap: wrap; }
 .held-knoepfe .hell { color: #fff !important; border-color: #fff; }
 .held-knoepfe .hell:hover { background: #fff; color: var(--gruen-dunkel) !important; }
