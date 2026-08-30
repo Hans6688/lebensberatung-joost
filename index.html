@@ -15,6 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="image" href="bilder/ruhe-weizenfeld-poster.jpg">
   <link rel="stylesheet" href="stil.css">
   <script type="application/ld+json">
   {
@@ -34,11 +36,36 @@
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Trier",
+      "addressRegion": "Rheinland-Pfalz",
       "addressCountry": "DE"
     },
     "areaServed": ["Trier", "Rheinland-Pfalz", "Luxemburg", "Deutschland"],
     "priceRange": "60 € pro Gespräch (60 Minuten)",
-    "knowsLanguage": "de"
+    "knowsLanguage": "de",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Beratungsformen",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "price": "60",
+          "priceCurrency": "EUR",
+          "itemOffered": { "@type": "Service", "name": "Telefonberatung", "description": "Psychologische Beratung am Telefon, ca. 60 Minuten." }
+        },
+        {
+          "@type": "Offer",
+          "price": "60",
+          "priceCurrency": "EUR",
+          "itemOffered": { "@type": "Service", "name": "Videoberatung", "description": "Psychologische Beratung online per Video, ca. 60 Minuten." }
+        },
+        {
+          "@type": "Offer",
+          "price": "60",
+          "priceCurrency": "EUR",
+          "itemOffered": { "@type": "Service", "name": "Persönliche Beratung in Trier", "description": "Psychologische Beratung vor Ort in Trier, 60 Minuten." }
+        }
+      ]
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -127,7 +154,7 @@
 <section class="abschnitt beige" id="unterstuetzung">
   <div class="container zweispaltig">
     <div class="bildrahmen">
-      <img src="bilder/beratungsgespraech-vertrauensvoll.jpg" alt="Vertrauensvolles Beratungsgespräch" loading="lazy">
+      <img src="bilder/beratungsgespraech-vertrauensvoll.jpg" alt="Vertrauensvolles Beratungsgespräch" width="1400" height="933" loading="lazy">
     </div>
     <div>
       <span class="vorspann">Beratung</span>
@@ -179,7 +206,7 @@
 <section class="abschnitt" id="ueber-mich">
   <div class="container zweispaltig">
     <div class="bildrahmen">
-      <img src="bilder/elske-joost-psychologische-beraterin-trier.jpg" alt="Elske Joost, psychologische Beraterin in Trier" loading="lazy">
+      <img src="bilder/elske-joost-psychologische-beraterin-trier.jpg" alt="Elske Joost, psychologische Beraterin in Trier" width="900" height="900" loading="lazy">
     </div>
     <div>
       <span class="vorspann">Über mich</span>
@@ -281,7 +308,7 @@
 
 <section class="abschnitt beige" id="hinweis" style="padding:60px 0">
   <div class="container" style="max-width:820px">
-    <h3 style="font-size:1.6rem">Rahmen und wichtiger Hinweis</h3>
+    <h2 style="font-size:1.6rem">Rahmen und wichtiger Hinweis</h2>
     <p style="margin-top:.8em">Psychologische Beratung bietet Unterstützung bei persönlichen Fragen, Belastungen und Veränderungsprozessen. Sie ersetzt keine ärztliche, psychiatrische oder psychotherapeutische Diagnose oder Behandlung. Bei akuten psychischen Krisen oder Notfällen wende dich bitte an den ärztlichen Bereitschaftsdienst unter <a href="tel:116117">116&nbsp;117</a> oder im Notfall an <a href="tel:112">112</a>.</p>
   </div>
 </section>
