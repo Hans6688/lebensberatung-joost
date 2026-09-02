@@ -387,3 +387,25 @@ a { color: var(--gruen); }
   .abschnitt { padding: 64px 0; }
   .bericht { padding: 28px 22px; }
 }
+
+/* ---------- Einblend-Animationen beim Scrollen ---------- */
+/* Nur aktiv, wenn JavaScript läuft (html.js) – sonst ist alles sofort sichtbar. */
+.js .anim {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity .9s cubic-bezier(.22, .61, .36, 1), transform .9s cubic-bezier(.22, .61, .36, 1);
+  will-change: opacity, transform;
+}
+.js .anim.von-links { transform: translateX(-64px); }
+.js .anim.von-rechts { transform: translateX(64px); }
+.js .anim.sichtbar { opacity: 1; transform: none; }
+.js .anim.verzoegert-1 { transition-delay: .12s; }
+.js .anim.verzoegert-2 { transition-delay: .24s; }
+.js .anim.verzoegert-3 { transition-delay: .36s; }
+@media (prefers-reduced-motion: reduce) {
+  .js .anim {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
