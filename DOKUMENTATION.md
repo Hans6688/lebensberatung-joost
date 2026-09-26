@@ -1,6 +1,6 @@
 # Lebensberatung Joost – Website-Redesign
 
-**Stand:** 30.08.2026
+**Stand:** 26.09.2026
 
 **Ursprünglich gebaut mit:** Claude (Claude-Code-Sitzung „Redesign Lebensberatung Joost“, August 2026)
 
@@ -9,7 +9,8 @@
 Redesign der Website **lebensberatung-joost.de** für Elske Joost – psychologische
 Beratung für Menschen in belastenden Lebenssituationen, telefonisch, online
 per Video oder persönlich vor Ort in Trier. Kernangebot laut Seite: erste Beratungsstunde
-kostenlos, danach 60 Minuten für 60 Euro. Termine Mo–Fr 15–18 Uhr.
+kostenlos, danach 60 Minuten für 60 Euro. Termine Mo–Fr nachmittags nach
+Vereinbarung. Ansprache in Sie-Form.
 
 ## 2. Technik & Architektur
 
@@ -21,7 +22,6 @@ kein Build-Schritt (SEO-/GEO-freundlich und ohne Wartungsaufwand).
 | Datei/Ordner | Zweck |
 |---|---|
 | `index.html` | Startseite mit Angebot, Ablauf und Kontakt |
-| `erfahrungsberichte.html` | Erfahrungsberichte / Referenzen |
 | `impressum.html`, `datenschutz.html` | Rechtstexte |
 | `stil.css` | zentrales Stylesheet |
 | `bilder/` | optimierte Fotos (Beratungssituationen, Porträt) sowie Hintergrundvideo + Standbild für die Startseite |
@@ -69,3 +69,4 @@ Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
 | 30.08.2026 | SEO-Gesamtprüfung: Favicon ergänzt; Startbild wird vorgeladen; Bildmaße gegen Layout-Springen hinterlegt; „Rahmen und wichtiger Hinweis“ auf H2 korrigiert; Beratungsformen mit Preisen und Region in die strukturierten Daten aufgenommen; Brotkrumen-Daten auf der Erfahrungsberichte-Seite; veraltete Navigation auf Impressum/Datenschutz repariert; Sitemap-Datum aktualisiert. |
 | 30.08.2026 | Sanfte Einblend-Animationen beim Scrollen (wie auf der alten Wix-Seite): Bild-/Textblöcke gleiten abwechselnd von links und rechts herein, Kartengruppen mit leichtem Versatz. Ohne JavaScript und bei „Bewegung reduzieren“ ist alles sofort sichtbar – Inhalte bleiben für Google voll lesbar. |
 | 30.08.2026 | Kundenwunsch: erste Beratungsstunde kostenlos (Knöpfe, Honorar-Abschnitt, Preiskarten, FAQ, Kontakt) und Beratungszeiten Mo–Fr 15–18 Uhr ergänzt – sichtbar und in den strukturierten Daten (Öffnungszeiten, Preisangabe). |
+| 26.09.2026 | Kundenwunsch: komplette Umstellung auf Sie-Ansprache; neue Texte für Willkommen, Beratung, Arbeitsweise, Über mich, Ablauf/Honorar und Kontakt; Termine jetzt „Mo–Fr am Nachmittag nach Vereinbarung“ (feste Uhrzeiten entfernt, auch aus den strukturierten Daten); Erfahrungsberichte vollständig entfernt (keine Einwilligung der betroffenen Personen zur Veröffentlichung) – Seite gelöscht, alle Verweise und Sitemap bereinigt. |
