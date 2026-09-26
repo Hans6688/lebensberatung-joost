@@ -164,6 +164,11 @@ a { color: var(--gruen); }
   text-shadow: 0 2px 18px rgba(0, 0, 0, .25);
 }
 .held-knoepfe { display: flex; gap: 16px; flex-wrap: wrap; }
+.vertrauenszeile {
+  margin-top: 26px;
+  font-size: .95rem;
+  color: rgba(255, 255, 255, .85);
+}
 .held-knoepfe .hell { color: #fff !important; border-color: #fff; }
 .held-knoepfe .hell:hover { background: #fff; color: var(--gruen-dunkel) !important; }
 
@@ -244,6 +249,7 @@ a { color: var(--gruen); }
   border-radius: var(--radius);
   padding: 32px 28px;
 }
+.abschnitt.dunkel .stimme h3 { color: var(--terra-hell); }
 .stimme blockquote {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.35rem;
