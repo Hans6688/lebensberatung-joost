@@ -1,0 +1,15 @@
+# Auslieferungs-Einstellungen fuer Netlify
+
+# Bilder und Video aendern sich nie (bei Austausch neuer Dateiname):
+# lange zwischenspeichern = schnellere Seite bei wiederkehrenden Besuchern
+[[headers]]
+  for = "/bilder/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"

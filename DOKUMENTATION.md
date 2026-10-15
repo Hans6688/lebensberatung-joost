@@ -44,6 +44,32 @@ Google-Bewertung nicht leidet, ist es bewusst zurückhaltend eingebaut:
 - Wer im Betriebssystem „Bewegung reduzieren“ oder den Datensparmodus
   aktiviert hat, bekommt ebenfalls nur das Standbild.
 
+## 3b. Livegang-Checkliste (Domain lebensberatung-joost.de)
+
+Die Domain bleibt dieselbe, nur der Betreiber dahinter wechselt (Wix → Netlify).
+Google-Platzierungen bleiben erhalten, wenn diese Reihenfolge eingehalten wird:
+
+1. Netlify-Konto anlegen (Anmeldung mit GitHub-Konto Hans6688) und das Repo
+   `lebensberatung-joost` als Site verbinden – keine Build-Einstellungen nötig.
+2. Probelauf auf der Netlify-Übergangsadresse: Startseite, Impressum, Datenschutz
+   und die Weiterleitungen testen (z. B. `/über-mich` muss auf die Startseite führen).
+3. Klären, wo die Domain verwaltet wird (vermutlich Wix). Nameserver auf Netlify
+   umstellen oder die DNS-Einträge setzen, die Netlify anzeigt.
+4. In Netlify **www.lebensberatung-joost.de als primäre Domain** festlegen
+   (alle alten Links und unsere Canonical-Angaben nutzen www; Netlify leitet die
+   Variante ohne www automatisch dorthin um). HTTPS-Zertifikat kommt automatisch.
+5. Erst wenn die neue Seite unter der Domain läuft: Wix-Abo kündigen –
+   **die Domain dabei ausdrücklich behalten/umziehen, nicht mitkündigen.**
+6. Google Search Console: Domain-Property für lebensberatung-joost.de anlegen
+   (Bestätigung per DNS-Eintrag) und `sitemap.xml` einreichen.
+7. Nach dem Livegang die GitHub-Pages-Vorschau abschalten (Repo-Einstellungen →
+   Pages), damit Google nicht zwei Kopien der Seite sieht.
+
+Alle alten Wix-Adressen (laut Wix-Sitemap: /, /über-mich, /podcast, /agb,
+/datenschutz, /impressum) leiten per `_redirects` dauerhaft auf ihre neuen
+Gegenstücke weiter. /podcast und /agb der alten Seite waren inhaltsleer
+(AGB nur Wix-Platzhaltertext), es geht kein Inhalt verloren.
+
 ## 4. Betrieb
 
 Änderungen an den HTML-Dateien vornehmen, committen und pushen. Der Weg der
@@ -75,3 +101,4 @@ Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
 | 26.09.2026 | Kundenwunsch: komplette Umstellung auf Sie-Ansprache; neue Texte für Willkommen, Beratung, Arbeitsweise, Über mich, Ablauf/Honorar und Kontakt; Termine jetzt „Mo–Fr am Nachmittag nach Vereinbarung“ (feste Uhrzeiten entfernt, auch aus den strukturierten Daten); Erfahrungsberichte vollständig entfernt (keine Einwilligung der betroffenen Personen zur Veröffentlichung) – Seite gelöscht, alle Verweise und Sitemap bereinigt. |
 | 26.09.2026 | Ersatz für das entfallene Vertrauenselement: Abschnitt „Typische Anliegen“ mit drei fiktiven, klar gekennzeichneten Fallbeispielen (zusammengesetzt, ohne Bezug zu realen Personen) sowie Vertrauenszeile im Startbereich (45 Jahre Erfahrung, vertraulich, erste Stunde kostenlos). |
 | 15.10.2026 | Livegang vorbereitet: `_redirects`-Datei mit dauerhaften Weiterleitungen der alten Wix-Adressen (u. a. /über-mich, /impressum, /datenschutz) für das Hosting auf Netlify angelegt. |
+| 15.10.2026 | Umzugspaket komplettiert: alte Wix-Sitemap ausgewertet (6 Adressen, inkl. bisher unbekannter leerer Seiten /podcast und /agb), Weiterleitungsliste vervollständigt, eigene 404-Fehlerseite, Auslieferungs-Einstellungen (Bild-Zwischenspeicherung, Sicherheits-Header) und Livegang-Checkliste in der Doku. |

@@ -1,6 +1,13 @@
-# Weiterleitungen alter Wix-Adressen auf die neue Seite (Status 301 = dauerhaft)
-/über-mich            /    301
-/%C3%BCber-mich       /    301
-/erfahrungsberichte.html   /    301
-/impressum            /impressum.html    301
-/datenschutz          /datenschutz.html  301
+# Dauerhafte Weiterleitungen (301) aller Adressen der alten Wix-Seite.
+# Vollstaendige Liste laut alter Wix-Sitemap vom 15.10.2026:
+# /, /über-mich, /podcast, /agb, /datenschutz, /impressum
+
+/über-mich                 /                   301
+/%C3%BCber-mich            /                   301
+/podcast                   /                   301
+/agb                       /impressum.html     301
+/impressum                 /impressum.html     301
+/datenschutz               /datenschutz.html   301
+
+# Zwischenzeitlich veroeffentlichte, wieder entfernte Seite
+/erfahrungsberichte.html   /                   301
