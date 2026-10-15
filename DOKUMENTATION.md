@@ -53,13 +53,17 @@ Google-Platzierungen bleiben erhalten, wenn diese Reihenfolge eingehalten wird:
    `lebensberatung-joost` als Site verbinden – keine Build-Einstellungen nötig.
 2. Probelauf auf der Netlify-Übergangsadresse: Startseite, Impressum, Datenschutz
    und die Weiterleitungen testen (z. B. `/über-mich` muss auf die Startseite führen).
-3. Klären, wo die Domain verwaltet wird (vermutlich Wix). Nameserver auf Netlify
-   umstellen oder die DNS-Einträge setzen, die Netlify anzeigt.
+3. Die Domain wird bei **Hostinger** verwaltet (Nameserver dns-parking.com,
+   geprüft am 15.10.2026); von dort zeigt nur ein DNS-Verweis auf Wix. Im
+   Hostinger-Kundenbereich die zwei DNS-Einträge setzen, die Netlify anzeigt
+   (www per CNAME auf die Netlify-Adresse, Hauptdomain per A-Eintrag).
 4. In Netlify **www.lebensberatung-joost.de als primäre Domain** festlegen
    (alle alten Links und unsere Canonical-Angaben nutzen www; Netlify leitet die
    Variante ohne www automatisch dorthin um). HTTPS-Zertifikat kommt automatisch.
-5. Erst wenn die neue Seite unter der Domain läuft: Wix-Abo kündigen –
-   **die Domain dabei ausdrücklich behalten/umziehen, nicht mitkündigen.**
+5. Erst wenn die neue Seite unter der Domain läuft: Wix-Abo kündigen. Die Domain
+   liegt NICHT bei Wix, sondern bei Hostinger – das Kündigen des Wix-Abos ist
+   daher ungefährlich für die Domain. Das Hostinger-Konto (Domainverwaltung)
+   muss bestehen bleiben.
 6. Google Search Console: Domain-Property für lebensberatung-joost.de anlegen
    (Bestätigung per DNS-Eintrag) und `sitemap.xml` einreichen.
 7. Nach dem Livegang die GitHub-Pages-Vorschau abschalten (Repo-Einstellungen →
