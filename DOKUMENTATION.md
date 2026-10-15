@@ -1,6 +1,6 @@
 # Lebensberatung Joost – Website-Redesign
 
-**Stand:** 26.09.2026
+**Stand:** 15.10.2026
 
 **Ursprünglich gebaut mit:** Claude (Claude-Code-Sitzung „Redesign Lebensberatung Joost“, August 2026)
 
@@ -26,6 +26,7 @@ kein Build-Schritt (SEO-/GEO-freundlich und ohne Wartungsaufwand).
 | `stil.css` | zentrales Stylesheet |
 | `bilder/` | optimierte Fotos (Beratungssituationen, Porträt) sowie Hintergrundvideo + Standbild für die Startseite |
 | `robots.txt`, `sitemap.xml` | Suchmaschinen-Steuerung |
+| `_redirects` | Weiterleitungen alter Wix-Adressen (wird von Netlify gelesen) |
 
 ## 3a. Hintergrundvideo auf der Startseite
 
@@ -53,8 +54,10 @@ Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
 
 - **PLZ-Frage** aus dem Redesign-Gespräch ist noch offen (Einzugsgebiet/lokale
   Auffindbarkeit) – vor dem Livegang klären.
-- **Livegang-Status und Hosting-Weg unklar:** Wie und wo wird die Seite
-  veröffentlicht (bisheriger Hoster der Domain)? Bitte ergänzen.
+- **Livegang:** Zielplattform ist Netlify (kostenlos, Auto-Deploy aus GitHub,
+  Weiterleitungen über `_redirects`). Offen: Netlify-Konto anlegen, Repo verbinden,
+  Domain lebensberatung-joost.de umstellen (klären, wo die Domain verwaltet wird –
+  vermutlich Wix; Domain beim Kündigen des Wix-Abos unbedingt behalten/umziehen).
 
 ## 6. Änderungsprotokoll
 
@@ -71,3 +74,4 @@ Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
 | 30.08.2026 | Kundenwunsch: erste Beratungsstunde kostenlos (Knöpfe, Honorar-Abschnitt, Preiskarten, FAQ, Kontakt) und Beratungszeiten Mo–Fr 15–18 Uhr ergänzt – sichtbar und in den strukturierten Daten (Öffnungszeiten, Preisangabe). |
 | 26.09.2026 | Kundenwunsch: komplette Umstellung auf Sie-Ansprache; neue Texte für Willkommen, Beratung, Arbeitsweise, Über mich, Ablauf/Honorar und Kontakt; Termine jetzt „Mo–Fr am Nachmittag nach Vereinbarung“ (feste Uhrzeiten entfernt, auch aus den strukturierten Daten); Erfahrungsberichte vollständig entfernt (keine Einwilligung der betroffenen Personen zur Veröffentlichung) – Seite gelöscht, alle Verweise und Sitemap bereinigt. |
 | 26.09.2026 | Ersatz für das entfallene Vertrauenselement: Abschnitt „Typische Anliegen“ mit drei fiktiven, klar gekennzeichneten Fallbeispielen (zusammengesetzt, ohne Bezug zu realen Personen) sowie Vertrauenszeile im Startbereich (45 Jahre Erfahrung, vertraulich, erste Stunde kostenlos). |
+| 15.10.2026 | Livegang vorbereitet: `_redirects`-Datei mit dauerhaften Weiterleitungen der alten Wix-Adressen (u. a. /über-mich, /impressum, /datenschutz) für das Hosting auf Netlify angelegt. |

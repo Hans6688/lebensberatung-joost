@@ -1,0 +1,6 @@
+# Weiterleitungen alter Wix-Adressen auf die neue Seite (Status 301 = dauerhaft)
+/über-mich            /    301
+/%C3%BCber-mich       /    301
+/erfahrungsberichte.html   /    301
+/impressum            /impressum.html    301
+/datenschutz          /datenschutz.html  301
