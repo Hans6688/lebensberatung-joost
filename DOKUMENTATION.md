@@ -1,6 +1,6 @@
 # Lebensberatung Joost – Website-Redesign
 
-**Stand:** 15.10.2026
+**Stand:** 21.10.2026
 
 **Ursprünglich gebaut mit:** Claude (Claude-Code-Sitzung „Redesign Lebensberatung Joost“, August 2026)
 
@@ -22,6 +22,14 @@ kein Build-Schritt (SEO-/GEO-freundlich und ohne Wartungsaufwand).
 | Datei/Ordner | Zweck |
 |---|---|
 | `index.html` | Startseite mit Angebot, Ablauf und Kontakt |
+| `lebensberatung-trier/` | Zielseite „Psychologische Beratung in Trier“ (Anzeigen + lokale SEO) |
+| `trauerbegleitung/` | Themenseite Verlust/Trauer (Anzeigengruppe) |
+| `krise-neuorientierung/` | Themenseite Krisen/Erschöpfung/Entscheidungen (Anzeigengruppe) |
+| `beziehung-familie/` | Themenseite Konflikte Partnerschaft/Familie, Einzelberatung (Anzeigengruppe) |
+| `ueber-mich/` | Porträtseite Elske Joost (Sitelink/Vertrauen) |
+| `ablauf-honorar/` | Ablauf, Honorar und alle FAQs inkl. Krankenkassen-Frage (Sitelink) |
+| `kontakt/` | Kontaktseite mit echtem Formular (Netlify-Formularfunktion) |
+| `danke/` | Bestätigungsseite nach Formularversand – Zählseite fürs Conversion-Tracking (noindex) |
 | `impressum.html`, `datenschutz.html` | Rechtstexte |
 | `stil.css` | zentrales Stylesheet |
 | `bilder/` | optimierte Fotos (Beratungssituationen, Porträt) sowie Hintergrundvideo + Standbild für die Startseite |
@@ -106,3 +114,4 @@ Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
 | 26.09.2026 | Ersatz für das entfallene Vertrauenselement: Abschnitt „Typische Anliegen“ mit drei fiktiven, klar gekennzeichneten Fallbeispielen (zusammengesetzt, ohne Bezug zu realen Personen) sowie Vertrauenszeile im Startbereich (45 Jahre Erfahrung, vertraulich, erste Stunde kostenlos). |
 | 15.10.2026 | Livegang vorbereitet: `_redirects`-Datei mit dauerhaften Weiterleitungen der alten Wix-Adressen (u. a. /über-mich, /impressum, /datenschutz) für das Hosting auf Netlify angelegt. |
 | 15.10.2026 | Umzugspaket komplettiert: alte Wix-Sitemap ausgewertet (6 Adressen, inkl. bisher unbekannter leerer Seiten /podcast und /agb), Weiterleitungsliste vervollständigt, eigene 404-Fehlerseite, Auslieferungs-Einstellungen (Bild-Zwischenspeicherung, Sicherheits-Header) und Livegang-Checkliste in der Doku. |
+| 21.10.2026 | Acht Unterseiten für Google-Ads-Anzeigengruppen und Sitelinks angelegt (Struktur laut Kampagnenplan): vier Themen-Zielseiten, Über-mich, Ablauf &amp; Honorar (mit allen FAQs inkl. ehrlicher Krankenkassen-Antwort), Kontakt mit echtem Formularversand über Netlify und /danke als Conversion-Zählseite. Startseite, Menü, Fußzeile (Themen-Spalte), interne Verlinkung, Sitemap, Weiterleitungen (/über-mich → /ueber-mich/) und Datenschutzerklärung (Netlify-Hosting + Formular) angepasst. FAQ-Strukturdaten von der Startseite auf /ablauf-honorar/ verlegt (keine Dubletten). Hinweis: Das Formular versendet erst nach dem Umzug auf Netlify; auf der GitHub-Vorschau ist es ohne Funktion. |

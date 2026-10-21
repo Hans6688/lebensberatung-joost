@@ -2,8 +2,8 @@
 # Vollstaendige Liste laut alter Wix-Sitemap vom 15.10.2026:
 # /, /über-mich, /podcast, /agb, /datenschutz, /impressum
 
-/über-mich                 /                   301
-/%C3%BCber-mich            /                   301
+/über-mich                 /ueber-mich/        301
+/%C3%BCber-mich            /ueber-mich/        301
 /podcast                   /                   301
 /agb                       /impressum.html     301
 /impressum                 /impressum.html     301

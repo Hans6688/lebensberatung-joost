@@ -327,7 +327,7 @@ a { color: var(--gruen); }
 
 /* ---------- Fuß ---------- */
 .fuss { background: var(--tinte); color: #CFC8BE; padding: 56px 0 32px; }
-.fuss-gitter { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.fuss-gitter { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.3fr; gap: 36px; margin-bottom: 40px; }
 .fuss h3 { color: var(--creme); font-size: 1.2rem; }
 .fuss a { color: #CFC8BE; text-decoration: none; }
 .fuss a:hover { color: var(--terra-hell); }
