@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.lebensberatung-joost.de/sitemap.xml
+Sitemap: https://lebensberatung-joost.de/sitemap.xml

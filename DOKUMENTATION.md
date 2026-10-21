@@ -1,6 +1,6 @@
 # Lebensberatung Joost – Website-Redesign
 
-**Stand:** 21.10.2026
+**Stand:** 21.10.2026 (live auf lebensberatung-joost.de via Netlify)
 
 **Ursprünglich gebaut mit:** Claude (Claude-Code-Sitzung „Redesign Lebensberatung Joost“, August 2026)
 
@@ -84,9 +84,13 @@ Gegenstücke weiter. /podcast und /agb der alten Seite waren inhaltsleer
 
 ## 4. Betrieb
 
-Änderungen an den HTML-Dateien vornehmen, committen und pushen. Der Weg der
-Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
-(siehe Offene Punkte).
+Die Seite ist live auf **https://lebensberatung-joost.de** (Hauptadresse ohne www;
+www leitet dauerhaft dorthin um). Hosting: Netlify, automatische Veröffentlichung
+bei jedem Push auf den main-Zweig. Formular-Anfragen laufen über die
+Netlify-Formularfunktion (im Netlify-Konto unter „Forms" einsehbar; dort auch die
+E-Mail-Benachrichtigung an die Kundin einrichten/prüfen). Die frühere
+GitHub-Pages-Vorschau wurde am 21.10.2026 abgeschaltet, damit Google nur eine
+Fassung der Seite sieht.
 
 ## 5. Offene Punkte
 
@@ -115,3 +119,4 @@ Veröffentlichung auf lebensberatung-joost.de ist im Repository nicht hinterlegt
 | 15.10.2026 | Livegang vorbereitet: `_redirects`-Datei mit dauerhaften Weiterleitungen der alten Wix-Adressen (u. a. /über-mich, /impressum, /datenschutz) für das Hosting auf Netlify angelegt. |
 | 15.10.2026 | Umzugspaket komplettiert: alte Wix-Sitemap ausgewertet (6 Adressen, inkl. bisher unbekannter leerer Seiten /podcast und /agb), Weiterleitungsliste vervollständigt, eigene 404-Fehlerseite, Auslieferungs-Einstellungen (Bild-Zwischenspeicherung, Sicherheits-Header) und Livegang-Checkliste in der Doku. |
 | 21.10.2026 | Acht Unterseiten für Google-Ads-Anzeigengruppen und Sitelinks angelegt (Struktur laut Kampagnenplan): vier Themen-Zielseiten, Über-mich, Ablauf &amp; Honorar (mit allen FAQs inkl. ehrlicher Krankenkassen-Antwort), Kontakt mit echtem Formularversand über Netlify und /danke als Conversion-Zählseite. Startseite, Menü, Fußzeile (Themen-Spalte), interne Verlinkung, Sitemap, Weiterleitungen (/über-mich → /ueber-mich/) und Datenschutzerklärung (Netlify-Hosting + Formular) angepasst. FAQ-Strukturdaten von der Startseite auf /ablauf-honorar/ verlegt (keine Dubletten). Hinweis: Das Formular versendet erst nach dem Umzug auf Netlify; auf der GitHub-Vorschau ist es ohne Funktion. |
+| 21.10.2026 | SEO/GEO-Ausbau nach Livegang: alle internen Adressangaben auf die Live-Hauptadresse ohne www umgestellt; Fakten-Leiste (erste Stunde kostenlos, 60 Min/60 €, Formate, Zeiten, vertraulich) auf allen Themen- und der Honorar-Seite; je Themenseite eigenes Dienstleistungs-Datenpaket und drei themenspezifische Fragen-Antworten (sichtbar + maschinenlesbar, ohne Dubletten); Bilder mit Alt-Texten und Querverweise „Verwandte Themen“ ergänzt; GitHub-Pages-Vorschau abgeschaltet. |

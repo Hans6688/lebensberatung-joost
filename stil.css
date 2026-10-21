@@ -415,3 +415,34 @@ a { color: var(--gruen); }
     transition: none !important;
   }
 }
+
+/* ---------- Fakten-Leiste unter dem Seitenkopf ---------- */
+.fakten-leiste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  justify-content: center;
+  list-style: none;
+  padding: 22px 28px;
+  background: var(--weiss);
+  border-radius: var(--radius);
+  box-shadow: var(--schatten);
+  margin-top: -34px;
+  position: relative;
+  z-index: 2;
+}
+.fakten-leiste li {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--gruen-dunkel);
+  padding-left: 20px;
+  position: relative;
+}
+.fakten-leiste li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .42em;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--terra);
+}
