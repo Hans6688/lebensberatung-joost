@@ -32,12 +32,12 @@
     var b = document.createElement('div');
     b.id = 'cookie-banner';
     b.setAttribute('role', 'dialog');
-    b.setAttribute('aria-label', 'Hinweis zur Werbe-Messung');
+    b.setAttribute('aria-label', 'Cookie-Hinweis');
     b.innerHTML =
-      '<p><strong>Werbe-Messung erlauben?</strong> Diese Website nutzt Google Ads, um zu messen, ob Anzeigen zu Anfragen führen. Dabei setzt Google Cookies. Ihre Wahl können Sie jederzeit im Seitenfuß ändern. Details in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>' +
+      '<p><strong>Diese Website verwendet Cookies.</strong> Technisch notwendige Cookies sorgen dafür, dass die Website funktioniert. Mit Ihrer Zustimmung nutzen wir zusätzlich Cookies von Google, um den Erfolg unserer Werbeanzeigen zu messen. Ihre Auswahl können Sie jederzeit über „Cookie-Einstellungen" im Seitenfuß ändern. Mehr dazu in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>' +
       '<div class="cookie-knoepfe">' +
-      '<button type="button" id="cookie-ja" class="knopf terra">Erlauben</button>' +
-      '<button type="button" id="cookie-nein" class="knopf hell">Ablehnen</button>' +
+      '<button type="button" id="cookie-ja" class="knopf terra">Alle akzeptieren</button>' +
+      '<button type="button" id="cookie-nein" class="knopf hell">Nur notwendige</button>' +
       '</div>';
     document.body.appendChild(b);
     document.getElementById('cookie-ja').addEventListener('click', function () {
